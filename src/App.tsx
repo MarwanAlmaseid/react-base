@@ -3,6 +3,12 @@ import logo from './logo.svg';
 import './App.scss';
 import classes from './App.module.scss';
 import Button from '@material-ui/core/Button';
+import store from 'store2';
+
+const setValue = ()=> {
+  store('lang', 'ar');                 
+}
+
 
 function App() {
   return (
@@ -12,7 +18,7 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
-        <Button variant="contained" color="primary">
+        <Button variant="contained" color="primary" onClick={setValue}>
           Hello World
         </Button>
       </header>
